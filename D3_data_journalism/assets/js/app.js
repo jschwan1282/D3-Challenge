@@ -207,8 +207,9 @@ d3.csv("./assets/data/data.csv").then(function (hdata, err) {
         .attr("cx", d => xLinearScale(d[chosenXAxis]))
         .attr("cy", d => yLinearScale(d[chosenYAxis]))
         .attr("r", 20)
-        .attr("fill", "blue")
-        .attr("opacity", ".5");
+        // .attr("fill", "blue")
+        .attr("opacity", ".5")
+        .classed("stateCircle", true);;
 
     var textGroup = chartGroup.selectAll(".stateText")
         .data(hdata)
